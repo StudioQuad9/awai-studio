@@ -1,10 +1,11 @@
 // @/app/layout.jsx
 
 import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import { Noto_Sans_JP, Noto_Serif_JP, Cormorant_Garamond } from 'next/font/google';
+// import Footer from '@/components/layout/Footer';
+import { Noto_Sans_JP, Noto_Serif_JP, Cormorant_Garamond, Zen_Old_Mincho } from 'next/font/google';
 import "@/styles/shared/reset.css";
 import "./globals.scss";
+
 
 // フォント設定
 const notoSans = Noto_Sans_JP({
@@ -30,6 +31,13 @@ const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-title-en",
 });
 
+const zenOldMincho = Zen_Old_Mincho({
+  weight: ["400"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-tegomin",
+});
+
 // meta要素の設定
 export const metadata = {
   title: "This project concept here | RETREAT K",
@@ -43,12 +51,13 @@ export const metadata = {
 // => suppressHydrationWarning
 export default function RootLayout({ children }) {
   return (
-    <html 
-      lang="ja" 
+    <html
+      lang="ja"
       className={`
         ${notoSans.variable}
         ${notoSerif.variable}
         ${cormorantGaramond.variable}
+        ${zenOldMincho.variable}
       `}
       suppressHydrationWarning
     >

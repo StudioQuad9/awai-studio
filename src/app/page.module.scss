@@ -1,3 +1,17 @@
 // @/app/page.module.scss
 
 @use '@/styles/shared/' as *;
+
+.heroInner {
+  justify-content:space-between;
+  padding: 75% 0 3rem;
+
+  & > h1 {
+    font-family: var(--ff-title-min);  
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: .1em;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  }
+}
