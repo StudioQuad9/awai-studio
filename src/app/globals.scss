@@ -3,9 +3,10 @@
 @use '@/styles/shared/' as *;
 
 :root {
-  font-size: 100%;
+  font-size: 93.75%;
   --ff-gothic: var(--font-gothic), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Hiragino Sans", sans-serif;
   --ff-mincho: var(--font-mincho), "Georgia", "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --ff-title-min: var(--font-tegomin), serif;
   --ff-title-en: var(--font-title-en), sans-serif;
   --ff-mono: "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Consolas", "Courier New", monospace;
 }
@@ -13,8 +14,13 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 // layout.jsで定義した変数が使えてしまうNext.jsの不思議
 // var(--font-gothi, var(--font-minch, var(--font-title-en)
 body {
@@ -25,118 +31,150 @@ body {
 }
 
 // page.module.scssの詳細度を勝たせるための施作
-:where(main) > :where(.container) {
+// やりたいことはcontainerクラスの定義
+:where(main) :where(.container) {
   @include content-width;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
-section:not(:first-of-type)  {
-  margin-top: 24px;
+#top-panel {
+  margin-top: 100vh;
 }
 
-.sec {
-  &__title {
-    font-size: $fs-lg4;
+.panel {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  background-color: $color-white;
+}
+
+// .gap-image {
+//   position: relative;
+//   z-index: 1;
+//   height: 20rem;
+//   background-image: var(--panel-bg);
+//   background-size: cover;
+//   background-position: center;
+//   background-attachment: fixed;
+//   &::after {
+//     position:absolute;
+//     content:"";
+//     inset:0;
+//     background: rgba($color: $color-black, $alpha: .25)
+//   }
+// }
+
+// // くそアップル用
+// @supports (-webkit-touch-callout: none) {
+//   .gap-image{
+//     background-attachment: scroll; // iOSはfixed捨てる
+//   }
+// }
+
+// // くそアップル用
+// @supports (-webkit-touch-callout: none) {
+//   .gap-image{
+//     background-position: center top; // ほんの少し印象変える
+//   }
+// }
+
+// くそアップル用
+.hero__video,
+.hero__video * {
+  pointer-events: none;
+}
+
+// 背景として固定するヒーロー
+.hero {
+  pointer-events: none;
+  position: fixed;
+  inset: 0; // top:0 right:0 bottom:0 left:0
+  overflow: hidden;
+  z-index: 0; // 背面
+  // 動画
+  &__video {
+    position: absolute;
+    inset: 0;
+    & > video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
   }
-  &__sub-title {
-    margin: 1.1rem 0 0.35rem;
-    font-family: var(--ff-gothic);
-    font-size: $fs-lg2;
-    line-height: $lh-tight;
+  // 動画上の文字
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding: 30px 0;
+    color: #fff;
+    & .btn--primary {
+      background-color: rgba($color: $color-black, $alpha: .6);
+    }
+    & .btn--ghost {
+      background-color: rgba($color: $color-white, $alpha: .6);
+    }
   }
 }
 
-h1 {
-  margin-bottom: 12px;
-}
-
-h2 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-p, .spec {
-  font-family: var(--ff-mincho);
-  line-height: 1.7;
-}
-
-label {
-  display: block;
-  margin-top: 14px
-}
-
-input {
-  width: 100%;
-  padding: 10px 12px;
-  margin-top: 6px;
-}
-
-button,
-input,
-select,
-textarea,
-nav,
-.header,
-.footer {
-  font-family: var(--ff-gothic);
-}
-
-a {
-  text-decoration: none;
-}
-
-.en-title,
-h1.en,
-h2.en {
-  font-family: var(--ff-title-en);
-  letter-spacing: 0.02em;
-}
-
-.bullets {
-  margin-left: 3rem;
-  line-height: $lh-tight;
-  font-family: var(--ff-mincho);
-  & > li:not(:first-of-type) {
-    margin-top: .5rem;
-  }
-}
-
-.margin-R-thin {
-  display: inline-block;
-  margin-right: .2em;
-}
-
+// block要素は親要素いっぱいに広がる
+// => width: auto; と同じ、そして、これとも同じ width: 100%; だから省略する。
 .image-wrapper {
   position: relative;
-  width: 100%;
   aspect-ratio: 3 / 2;
   overflow: hidden;
   & img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
 
-pre {
-  font-family: var(--ff-mono);
-  white-space: pre; // これが本命：改行とスペースを保持
-  overflow-x: auto; // はみ出したら横スクロール
+h1, h2, h3 {
+  line-height: 1;
 }
 
-button {
-  margin-top: 2rem;
-  padding: .5em 1.5em;
+h2 {
+  font-size: $fs-lg2;
+  font-family: var(--ff-title-en);
+  letter-spacing: 0.02em;
+}
+h3 {
+  margin: 1rem 0 0.25rem;
+  font-family: var(--ff-mincho);
+  font-size: $fs-lg4;
 }
 
-.parens {
-  display: inline-block;
-  &__left {
-    margin-right: .15rem;
-  }
-  &__right {
-    margin-left: .15rem;
-  }
+p, .spec {
+  font-family: var(--ff-mincho);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+button,
+input,
+select,
+textarea,
+nav {
+  font-family: var(--ff-gothic);
+}
+
+a {
+  text-decoration: none;
+  pointer-events: auto;
 }
 
 .btn {
@@ -175,6 +213,49 @@ button {
   }
 }
 
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  margin-top: 14px
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+}
+
+.bullets {
+  margin-left: 3rem;
+  line-height: $lh-tight;
+  font-family: var(--ff-mincho);
+  & > li:not(:first-of-type) {
+    margin-top: .5rem;
+  }
+}
+
+pre {
+  font-family: var(--ff-mono);
+  white-space: pre; // これが本命：改行とスペースを保持
+  overflow-x: auto; // はみ出したら横スクロール
+}
+
+.parens {
+  display: inline-block;
+  &__left {
+    margin-right: .15rem;
+  }
+  &__right {
+    margin-left: .15rem;
+  }
+}
+
 // A11Y focus ring baseline
 :where(a, button, input, select, textarea):focus {
   outline: none;
@@ -186,34 +267,8 @@ button {
   border-radius: 10px;
 }
 
-.hero {
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  &__eyebrow {
-    font-family: var(--ff-gothic);
-    font-size: $fs-sm;
-    letter-spacing: 0.06rem;
-    text-transform: uppercase;
-    opacity: 0.75;
-  }
-  &__title {
-    margin: 0;
-    font-family: var(--ff-title-en);
-    line-height: $lh-tight;
-  }
-  &__lead {
-    max-width: 68ch;
-    opacity: 0.92;
-  }
-  &__fineprint {
-    max-width: 70ch;
-    font-family: var(--ff-gothic);
-    font-size: $fs-sm;
-    opacity: 0.75;
-  }
+.page {
+  position: relative;
 }
 
 .spec-wrapper {
@@ -293,6 +348,16 @@ button {
   }
 }
 
+.inputNum {
+  display: block;
+  margin-top: 1rem;
+  padding: .75rem;
+}
+
+.margin-R-thin {
+  display: inline-block;
+  margin-right: .2em;
+}
 
 // ユーザーがブラウザでアニメーションの動きを止める設定をしている場合に対応するためのもの
 @media (prefers-reduced-motion: reduce) {

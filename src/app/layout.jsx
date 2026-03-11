@@ -1,10 +1,11 @@
 // @/app/layout.jsx
 
 import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import { Noto_Sans_JP, Noto_Serif_JP, Ysabeau } from 'next/font/google';
+// import Footer from '@/components/layout/Footer';
+import { Noto_Sans_JP, Noto_Serif_JP, Cormorant_Garamond, Zen_Old_Mincho } from 'next/font/google';
 import "@/styles/shared/reset.css";
 import "./globals.scss";
+
 
 // フォント設定
 const notoSans = Noto_Sans_JP({
@@ -23,11 +24,18 @@ const notoSerif = Noto_Serif_JP({
   variable: "--font-mincho",
 });
 
-const ysabeau = Ysabeau({
-  weight: ['200', '500'],
-  subsets: ['latin'],
-  display: 'swap',
+const cormorantGaramond = Cormorant_Garamond({
+  weight: ["300", "600"],
+  subsets: ["latin"],
+  display: "swap",
   variable: "--font-title-en",
+});
+
+const zenOldMincho = Zen_Old_Mincho({
+  weight: ["400"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-tegomin",
 });
 
 // meta要素の設定
@@ -43,19 +51,20 @@ export const metadata = {
 // => suppressHydrationWarning
 export default function RootLayout({ children }) {
   return (
-    <html 
-      lang="ja" 
+    <html
+      lang="ja"
       className={`
         ${notoSans.variable}
         ${notoSerif.variable}
-        ${ysabeau.variable}
+        ${cormorantGaramond.variable}
+        ${zenOldMincho.variable}
       `}
       suppressHydrationWarning
     >
       <body>
         <Header />
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
