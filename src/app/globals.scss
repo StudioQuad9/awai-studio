@@ -48,35 +48,35 @@ body {
   background-color: $color-white;
 }
 
-.gap-image {
-  position: relative;
-  z-index: 1;
-  height: 20rem;
-  background-image: var(--panel-bg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  &::after {
-    position:absolute;
-    content:"";
-    inset:0;
-    background: rgba($color: $color-black, $alpha: .25)
-  }
-}
+// .gap-image {
+//   position: relative;
+//   z-index: 1;
+//   height: 20rem;
+//   background-image: var(--panel-bg);
+//   background-size: cover;
+//   background-position: center;
+//   background-attachment: fixed;
+//   &::after {
+//     position:absolute;
+//     content:"";
+//     inset:0;
+//     background: rgba($color: $color-black, $alpha: .25)
+//   }
+// }
 
-// くそアップル用
-@supports (-webkit-touch-callout: none) {
-  .gap-image{
-    background-attachment: scroll; // iOSはfixed捨てる
-  }
-}
+// // くそアップル用
+// @supports (-webkit-touch-callout: none) {
+//   .gap-image{
+//     background-attachment: scroll; // iOSはfixed捨てる
+//   }
+// }
 
-// くそアップル用
-@supports (-webkit-touch-callout: none) {
-  .gap-image{
-    background-position: center top; // ほんの少し印象変える
-  }
-}
+// // くそアップル用
+// @supports (-webkit-touch-callout: none) {
+//   .gap-image{
+//     background-position: center top; // ほんの少し印象変える
+//   }
+// }
 
 // くそアップル用
 .hero__video,

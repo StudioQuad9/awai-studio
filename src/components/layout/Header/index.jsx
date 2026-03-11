@@ -1,4 +1,4 @@
-// @/components/layout/Footer.jsx
+// @/components/layout/Footer/index.jsx
 
 import styles from "./Header.module.scss";
 

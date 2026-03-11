@@ -145,34 +145,7 @@ mail: takahiro@hokuto-p.co.jp
     │   ├── globals.scss
     │   ├── layout.jsx
     │   ├── page.js
-    │   ├── page.module.scss
-    │   ├── admin/
-    │   │   ├── bookings
-    │   │   │   └── page.jsx
-    │   │   └── review-token
-    │   │       └── page.jsx
-    │   ├── api/
-    │   │   └── stripe
-    │   │       └── webhook
-    │   │           └── route.js
-    │   ├── booking/
-    │   │   ├── complete
-    │   │   │   └── page.jsx
-    │   │   ├── BookingForm.jsx
-    │   │   └── page.jsx
-    │   ├── experiences/
-    │   │   ├── [slug]/
-    │   │   │   ├── page.jsx
-    │   │   │   └── page.module.scss
-    │   │   ├── page.jsx
-    │   │   └── page.module.scss
-    │   └── review/
-    │       ├── thanks/
-    │       │   └── page.jsx
-    │       ├── page.jsx
-    │       ├── page.module.scss
-    │       ├── reviewActions.js
-    │       └── ReviewForm.jsx
+    │   └── page.module.scss
     ├── components/
     │   └── layout
     │       ├── Header
@@ -181,32 +154,11 @@ mail: takahiro@hokuto-p.co.jp
     │       └── Footer
     │           ├── index.jsx
     │           └── Footer.module.scss
+    ├── hooks/
+    │   └── useScrollAnimation.js
     ├── lib/
     │   ├── config
     │   │   └── site.js
-    │   ├── data
-    │   │   ├── experiences.js
-    │   │   └── reviews.js
-    │   ├── reviews
-    │   │   └── reviewSummary.js
-    │   ├── server/
-    │   │   ├── getRemainingSeats.js
-    │   │   ├── getReviewsByExperienceSlug.js
-    │   │   ├── getSoldOutDatesForMonth.js
-    │   │   ├── reviews.js
-    │   │   ├── reviewTokens.js
-    │   │   ├── saveBooking.js
-    │   │   ├── sendBookingEmail.js
-    │   │   ├── sendReviewEmail.js
-    │   │   ├── stripe.js
-    │   │   └── supabaseAdmin.js
-    │   └── utils/
-    │       ├── buildSchedule.js
-    │       ├── formatBookingDateText.js
-    │       ├── formatDuration.js
-    │       ├── formatPad.js
-    │       ├── formatYen.js
-    │       └── toISODateString.js
     └── styles/
         └── shared
             ├── _daypicker.scss
@@ -216,7 +168,7 @@ mail: takahiro@hokuto-p.co.jp
             └── reset.css
 ```
 
-_Last updated: 2026-02-18_
+_Last updated: 2026-03-07_
 
 ---
 
