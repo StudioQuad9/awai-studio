@@ -144,9 +144,9 @@ Payment processing is implemented using Stripe Checkout and is operated in a con
 
 ## Contact
 
-RETREAT K
+Awai Studio
 Kyoto, Japan
-mail: takahiro@hokuto-p.co.jp
+mail: info@awai-studio.jp
 
 # Others
 ## Site map
@@ -156,24 +156,23 @@ mail: takahiro@hokuto-p.co.jp
     │   ├── globals.scss
     │   ├── layout.jsx
     │   ├── page.js
-    │   ├── page.module.scss
     │   ├── en
-    │   │   └── page.js
-    │   └── jp
+    │   │   └── experiences
+    │   │       ├── page.js
+    │   │       └── TeaExperienceWithSoKo
+    │   │           └── page.js
+    │   └── ja
     │       └── page.js
     ├── components/
     │   └── layout
     │       ├── Header
     │       │   ├── index.jsx
     │       │   └── Header.module.scss
-    │       ├── Footer
-    │       │   ├── index.jsx
-    │       │   └── Footer.module.scss
-    │       └── HomeClient
+    │       └── Footer
     │           ├── index.jsx
-    │           └── HomeClient.module.scss
+    │           └── Footer.module.scss
     ├── hooks/
-    │   ├── useParallaxGaps.js.js
+    │   ├── useParallaxGaps.js
     │   └── useScrollAnimation.js
     ├── lib/
     │   ├── config
@@ -183,11 +182,12 @@ mail: takahiro@hokuto-p.co.jp
             ├── _daypicker.scss
             ├── _index.scss
             ├── _mixins.scss
+            ├── _motion.scss
             ├── _variables.scss
             └── reset.css
 ```
 
-_Last updated: 2026-03-07_
+_Last updated: 2026-04-07_
 
 ---
 

@@ -5,84 +5,108 @@ export default function TeaExperienceWithSoKo() {
     <>
       <h1>Tea Experience with SoKo</h1>
 
-      <p>Enter a quiet cultural experience in Japan.</p>
       <p>
-        Held in a small tea room in Kyoto, this session is guided by tea master
-        SoKo.
+        A participatory tea experience in Kyoto, shaped through dialogue,
+        practice, and quite attention.
+      </p>
+      <p>
+        Held in a small traditional tea room in Kyoto, this session is guided by
+        tea master SoKo, who invites guests not only to observe, but to enter
+        the experience through conversation and practice.
       </p>
 
       <h2>Overview</h2>
 
       <p>
-        Through tea, the session opens a space for reflection and conversation.
+        This is not a formal lesson focused on correctness, nor a performance
+        observed from a distance.
       </p>
       <p>
-        Rather than observing from a distance, you are invited to take part in the experience itself.
+        Guests are invited to take part directly: to listen, to respond, to
+        prepare tea, and to discover meaning through the act itself.
+      </p>
+      <p>
+        Conversation is essential to the session. SoKo asks questions, listens
+        closely, and encourages each guest to respond in their own words.
       </p>
 
-      <h2>Location</h2>
+      <h2>What Makes This Experience Different</h2>
 
       <p>
-        The tea room is located in a quiet area of Kyoto, within walking distance of major cultural landmarks.
+        The experience combines two qualities that rarely appear together:
+        active participation and deep stillness.
       </p>
-
-      <ul>
-        <li>15 minutes walk from Kinkaku-ji (Golden Pavilion)</li>
-        <li>11 minutes walk from Daitokuji Temple</li>
-      </ul>
+      <p>
+        At some moments, the room becomes animated by dialogue, interpretation,
+        and effort, as guests try to express what they feel and understand.
+      </p>
+      <p>
+        At other moments, the atmosphere shifts completely. Soft light through
+        shoji screens, the shadowed depth of the tea room, the glow of candle
+        lights, and the sound of hot water being scooped and poured create a
+        distinctly Japanese sense of presence.
+      </p>
+      <p>
+        The session moves between these different qualities naturally, allowing
+        guests to experience tea not only as form, but as rhythm, sound, space,
+        and attention.
+      </p>
 
       <h2>What Happens</h2>
 
       <ul>
-        <li>Meet near the tea room and enter a small traditional space</li>
-        <li>Observe and participate in multiple tea preparations</li>
-        <li>Experience tea through practice and direct engagement</li>
-        <li>Engage in conversation guided by the host</li>
+        <li>Meet near the tea room and enter a small traditional setting</li>
+        <li>Receive an introduction to the session and its atmosphere</li>
+        <li>Observe and participate in several tea preparations</li>
+        <li>Handle utensils and try preparing tea yourself</li>
+        <li>Respond to questions and engage in guided conversation</li>
+        <li>Experience the room through light, sound, gesture, and taste</li>
       </ul>
 
       <h2>Participation</h2>
 
-      <p>This experience is fully participatory.</p>
       <p>
-        Guests are invited not only to drink tea, but also to prepare it, handle
-        utensils, and respond to the host’s questions.
+        Guests are encouraged to participate actively, even without prior
+        knowledge of tea.
       </p>
       <p>
-        {" "}
-        No prior knowledge is required. The focus is on experience rather than
-        formal correctness.
+        You do not need to know the rules in advance. What matters here is not
+        perfection, but willingness: to try, to pay attention, and to enter the
+        experience with openness.
       </p>
 
       <h2>Sweets & Tea</h2>
 
-      <p>Traditional Japanese sweets are served before each tea.</p>
       <p>
-        Multiple rounds of tea are prepared, allowing guests to experience both
-        taste and rhythm.
+        Traditional Japanese sweets are served as part of the experience, and
+        multiple rounds of tea may be prepared during the session.
       </p>
-      <p>The sweets are carefully selected, using high-quality ingredients.</p>
+      <p>
+        Through repeated preparation and tasting, guests begin to notice not
+        only flavor, but also rhythm, timing, and atmosphere.
+      </p>
 
-      <h2>Atmosphere</h2>
+      <h2>The Setting</h2>
 
-      <p>This is a small-group experience (up to 6 guests).</p>
       <p>
-        Conversation is an essential part of the session. Guests are encouraged
-        to share their thoughts and perspectives.
+        The setting takes place in a small tea room in Kyoto, in a quiet area
+        connected to important cultural landmarks.
       </p>
-      <p>
-        Rather than focusing on taking photographs, attention naturally shifts
-        to the shared moment itself.
-      </p>
+
+      <ul>
+        <li>Approx. 15 minutes on foot from Kinkaku-ji (Golden Pavilion)</li>
+        <li>Approx. 11 minutes on foot from Daitokuji Temple</li>
+      </ul>
 
       <h2>Practical Information</h2>
 
       <ul>
-        <li>Duration: approximately 70 minutes</li>
+        <li>Duration: approximately 90 minutes</li>
         <li>Group size: up to 6 guests</li>
-        <li>Location: Kyoto</li>
-        <li>Language: English / Japanese</li>
-        <li>Dress code: none (seiza is traditional but flexible)</li>
+        <li>Language: English only</li>
+        <li>Dress code: none (seiza is traditional, but not required)</li>
         <li>Photography: allowed</li>
+        <li>Suggested starting price: from ¥14,000 per guest</li>
       </ul>
 
       <h2>Booking</h2>

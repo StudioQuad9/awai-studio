@@ -29,6 +29,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container {
+  background-image: url('/images/hero-image-heron01.jpg');
+  background-repeat: no-repeat;
+  background-size: 350%;
+  background-position: center 70%;
+  @include mq(md) {
+    background-image: url('/images/hero-image-lotus03.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -41,10 +53,11 @@ body {
 
   & > .title {
     position: relative;
-    margin: 12rem 0;
+    margin: 18rem 0 7rem;
     font-family: var(--ff-title-en);
+    color: rgba($color: $color-white, $alpha: .7);
     @include mq(md) {
-      margin: unset;
+      margin: 15rem 0 0rem;
       margin-bottom: 5rem;
     }
     &::after {
@@ -55,36 +68,87 @@ body {
       transform: translate(-50%, -55%);
       width: 100vw;
       height: 45vh;
-      background-image: url("/images/logo-awai-portrait.png");
+      background-image: url("/images/logo-awai-portrait-gray.png");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      opacity: .1;
+      opacity: .2;
       filter: blur(3px);
       @include mq(md) {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -65%);        
         height: 30vh;
-        background-image: url("/images/logo-awai-black.png");
+        background-image: url("/images/logo-awai-white.png");
       }
     }
   }
 
   & .wrapper {
-    margin-top: 1.25rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    padding: 2rem 0 3rem;
+    border-radius: 2px;   
+    -webkit-mask-image: 
+      linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 25%,
+        black 75%,
+        transparent 100%
+      );
+    mask-image: 
+      linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 25%,
+        black 75%,
+        transparent 100%
+      );   
+    @include mq(md) {
+      padding: 2rem;
+      background-color: rgba($color: green, $alpha: .5);
+      -webkit-mask-image: 
+        linear-gradient(
+          to bottom,
+          transparent 0%,
+          black 25%,
+          black 75%,
+          transparent 100%
+        );
+      mask-image: 
+        linear-gradient(
+          to bottom,
+          transparent 0%,
+          black 25%,
+          black 75%,
+          transparent 100%
+        );    
+    }
   }
   
   & .catch-copy {
     position: relative;
+    width: fit-content;
+    margin: 0 auto;
     text-align: center; 
     font-size: 2rem;
-    line-height: 1;
+    line-height: 1.2;
     font-family: var(--ff-title-en);
     font-weight: 600;
     letter-spacing: .2em;
     opacity: .8;
-    color: $color-gold;
+    color: rgba($color: $color-gold, $alpha: .8);
+    text-shadow: 
+      0 0 20px rgba(0, 0, 0, 0.9),
+      0 0 40px rgba(0, 0, 0, 0.8),
+      2px 2px 8px rgba(0, 0, 0, 1),
+      -2px -2px 8px rgba(0, 0, 0, 0.6);
+    @include mq(md) {
+      line-height: 1;
+      color: rgba($color: $color-white, $alpha: .8);
+      text-shadow: unset;
+    }
     &::before,
     &::after {
       content: "";
@@ -99,7 +163,7 @@ body {
         transform: unset;        
         width: 100px;
         height: 1px;
-        background-color: rgba($color: $color-gold, $alpha: 1);
+        background-color: $color-white;
       }
     }
     &::before {
@@ -123,23 +187,36 @@ body {
     text-align: center;
     font-size: 1.5rem;
     font-family: var(--ff-mincho);
-    letter-spacing: 2px;
-    color: rgba($color: $color-black, $alpha: .8);
+    letter-spacing: 1px;
+    color: rgba($color: $color-white, $alpha: .8);
+    @include mq(md) {
+      letter-spacing: 2px;
+    }
   }
   & .copy-en {
     margin-top: 1rem;
-    line-height: 1;
-    font-size: 1.4rem;
+    line-height: 1.3;
+    font-size: 1.35rem;
     font-family: var(--ff-title-en);
     font-weight: 600;
-    color: $color-gold;    
+    color: rgba($color: $color-gold, $alpha: .8);  
+    text-shadow: 
+      0 0 20px rgba(0, 0, 0, 0.9),
+      0 0 40px rgba(0, 0, 0, 0.8),
+      2px 2px 8px rgba(0, 0, 0, 1),
+      -2px -2px 8px rgba(0, 0, 0, 0.6);         
     @include mq(md) {
       font-size: 1.7rem;
+      text-shadow: unset;
+      color: rgba($color: $color-white, $alpha: .8);      
     }
   }
   & .copy-jp {
-    margin-top: 1.5rem;
     line-height: 1.5;
+    @include mq(md) {
+      line-height: 1;
+      color: #f1f700;
+    }
   }
 }
 
@@ -155,6 +232,7 @@ body {
     align-items: center;
     padding: 1em 2em;
     font-size: 1.1rem;
+    background-color: rgba($color: $color-white, $alpha: .5);
     border: 2px solid rgba($color: $color-black, $alpha: .2);
     border-radius: 1000px;
     transition: .5s ease;
