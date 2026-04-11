@@ -30,12 +30,17 @@ body {
 }
 
 .container {
-  background-image: url('/images/hero-image-heron01.jpg');
+  background-image: url('/images/hero-image-tea-room.jpg');
+  // background-image: url('/images/hero-image-heron01.jpg');
   background-repeat: no-repeat;
-  background-size: 350%;
-  background-position: center 70%;
+  // background-size: 350%;
+  // background-position: center 70%;
+  background-size: cover;
+  background-position: center;
   @include mq(md) {
-    background-image: url('/images/hero-image-lotus03.jpg');
+    // background-image: url('/images/hero-image-whisks.jpg');
+    // background-image: url('/images/hero-image-tea-room.png');
+    background-image: url('/images/hero-image-tea-room.jpg');
     background-size: cover;
     background-position: center;
   }
@@ -57,8 +62,7 @@ body {
     font-family: var(--ff-title-en);
     color: rgba($color: $color-white, $alpha: .7);
     @include mq(md) {
-      margin: 15rem 0 0rem;
-      margin-bottom: 5rem;
+      margin: 12rem 0 6rem;
     }
     &::after {
       position: absolute;
@@ -78,8 +82,9 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -65%);        
-        height: 30vh;
+        height: 22vh;
         background-image: url("/images/logo-awai-white.png");
+        opacity: .3;
       }
     }
   }
@@ -106,8 +111,8 @@ body {
         transparent 100%
       );   
     @include mq(md) {
-      padding: 2rem;
-      background-color: rgba($color: green, $alpha: .5);
+      padding: 2rem 4rem;
+      // background-color: rgba($color: green, $alpha: .3);
       -webkit-mask-image: 
         linear-gradient(
           to bottom,
@@ -146,8 +151,8 @@ body {
       -2px -2px 8px rgba(0, 0, 0, 0.6);
     @include mq(md) {
       line-height: 1;
-      color: rgba($color: $color-white, $alpha: .8);
-      text-shadow: unset;
+      // color: rgba($color: $color-white, $alpha: 1);
+      // text-shadow: unset;
     }
     &::before,
     &::after {
@@ -163,7 +168,7 @@ body {
         transform: unset;        
         width: 100px;
         height: 1px;
-        background-color: $color-white;
+        // background-color: $color-white;
       }
     }
     &::before {
@@ -206,16 +211,18 @@ body {
       2px 2px 8px rgba(0, 0, 0, 1),
       -2px -2px 8px rgba(0, 0, 0, 0.6);         
     @include mq(md) {
-      font-size: 1.7rem;
-      text-shadow: unset;
-      color: rgba($color: $color-white, $alpha: .8);      
+      margin-top: .5rem;
+      font-size: 1.55rem;
+      // text-shadow: unset;
+      // color: rgba($color: $color-white, $alpha: 1);      
     }
   }
   & .copy-jp {
     line-height: 1.5;
     @include mq(md) {
       line-height: 1;
-      color: #f1f700;
+      color: rgba($color: $color-white, $alpha: .6);      
+      // color: rgba($color: $color-black, $alpha: .9);            
     }
   }
 }
@@ -240,6 +247,9 @@ body {
       color: $color-white;
       background-color: $color-gold-dark;
     }
+  }
+  @include mq(md) {
+    margin-top: 2.5rem;
   }
 }
 
