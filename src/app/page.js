@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="container top-page">
       <div className="hero">
         <h1 className="title">Awai</h1>
         <div className="wrapper">

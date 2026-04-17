@@ -4,23 +4,33 @@ import Link from "next/link";
 
 export default function Experiences() {
   return (
-    <div className="experiences">
+    <div className="container">
+      {/* HERO */}
       <section className="experiences-hero">
         <h1>Experiences</h1>
         <p>
-          Cultural experiences in Kyoto for small groups, shaped through tea,
-          conversation, and reflection.
-          {/* 茶、会話、そして内省を通して織りなされる、少人数のための京都の文化体験 */}
+          Cultural experiences in Kyoto for small groups, shaped through
+          practice, dialogue, and reflection.
         </p>
       </section>
 
+      {/* LIST */}
       <section className="experiences-list">
+        {/* Tea Experience */}
         <Link href="/en/experiences/TeaExperienceWithSoKo">
           <h2>Tea Experience with SoKo</h2>
           <p>
             A participatory tea experience in Kyoto, guided by tea master SoKo
             through dialogue, practice, and reflection.
-            {/* 京都での参加型お茶体験。対話・実践・内省を通じて、ゲスト自身が学んでいく場。 */}
+          </p>
+          <p>90 minutes / up to 6 guests</p>
+        </Link>
+
+        <Link href="/en/experiences/ZenExperienceWithJirai">
+          <h2>Zen Experience with Jirai</h2>
+          <p>
+            A Zen-centered experience in Kyoto, where you explore
+            your experience of Japan through dialogue with a Zen monk.
           </p>
           <p>90 minutes / up to 6 guests</p>
         </Link>

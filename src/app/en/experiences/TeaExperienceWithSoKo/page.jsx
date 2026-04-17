@@ -2,17 +2,17 @@
 
 export default function TeaExperienceWithSoKo() {
   return (
-    <>
+    <div className="container">
       <h1>Tea Experience with SoKo</h1>
 
       <p>
-        A participatory tea experience in Kyoto, shaped through dialogue,
-        practice, and quite attention.
+        A participatory tea experience in Kyoto, shaped through practice,
+        dialogue, and quiet attention.
       </p>
       <p>
         Held in a small traditional tea room in Kyoto, this session is guided by
         tea master SoKo, who invites guests not only to observe, but to enter
-        the experience through conversation and practice.
+        the experience through direct practice and dialogue.
       </p>
 
       <h2>Overview</h2>
@@ -55,7 +55,10 @@ export default function TeaExperienceWithSoKo() {
       <h2>What Happens</h2>
 
       <ul>
-        <li>Meet near the tea room and enter a small traditional setting</li>
+        <li>
+          Arrive directly at the tea room in Kyoto (details provided after
+          booking)
+        </li>
         <li>Receive an introduction to the session and its atmosphere</li>
         <li>Observe and participate in several tea preparations</li>
         <li>Handle utensils and try preparing tea yourself</li>
@@ -89,21 +92,29 @@ export default function TeaExperienceWithSoKo() {
       <h2>The Setting</h2>
 
       <p>
-        The setting takes place in a small tea room in Kyoto, in a quiet area
-        connected to important cultural landmarks.
+        The experience takes place in a small traditional tea room in a quiet
+        area of Kyoto.
+      </p>
+      <p>
+        The location has been carefully selected to provide a quiet and focused
+        atmosphere, away from crowded tourist areas.
       </p>
 
+      <p>Approximate access:</p>
+
       <ul>
-        <li>Approx. 15 minutes on foot from Kinkaku-ji (Golden Pavilion)</li>
-        <li>Approx. 11 minutes on foot from Daitokuji Temple</li>
+        <li>18 minutes on foot from Kinkaku-ji (Golden Pavilion)</li>
+        <li>13 minutes on foot from Daitokuji Temple</li>
       </ul>
+
+      <p>The exact location will be shared after booking.</p>
 
       <h2>Practical Information</h2>
 
       <ul>
         <li>Duration: approximately 90 minutes</li>
         <li>Group size: up to 6 guests</li>
-        <li>Language: English only</li>
+        <li>Language: English</li>
         <li>Dress code: none (seiza is traditional, but not required)</li>
         <li>Photography: allowed</li>
         <li>Suggested starting price: from ¥14,000 per guest</li>
@@ -112,6 +123,6 @@ export default function TeaExperienceWithSoKo() {
       <h2>Booking</h2>
 
       <a href="/en/booking">Book this experience</a>
-    </>
+    </div>
   );
 }

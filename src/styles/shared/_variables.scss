@@ -1,11 +1,14 @@
 // @/src/styles/shared/_variables.scss
 
-// サイトに適応するmax-width
+// サイトに適応するmax-widthとナビゲーションバーの高さ
 $content-max-width: 1080px;
+$navHeight: 80px;
 
 // メインカラー
 $color-primary-dark: #8b6f47;    // 灰桜（はいざくら）- 落ち着いたピンクベージュ
 $color-primary: #a0826d;    // 灰桜（はいざくら）- 落ち着いたピンクベージュ
+$color-primary: #c99166;    // 灰桜（はいざくら）- 落ち着いたピンクベージュ
+$color-primary: #997050;    // 灰桜（はいざくら）- 落ち着いたピンクベージュ
 $color-primary-light: #eec2a3;    // 灰桜（はいざくら）- 落ち着いたピンクベージュ
 $color-primary-thinlight: #f8f0dd;    // 灰桜（はいざくら）- 落ち着いたピンクベージュ
 $color-secondary: #e8dcc4;  // 和紙色 - 温かみのあるベージュ
@@ -22,7 +25,7 @@ $color-white: #f9f6f2;    // オフホワイト（和紙風）
 $color-black: #333;
 
 // テキストカラー
-$color-text: #707070;  // グレー
+$color-text: #2a2a2a;
 
 // 擬似金色
 $color-gold: #c5aa41;
@@ -33,6 +36,7 @@ $font-gothic: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", "Ro
 $font-mincho: "Noto Serif JP", "Georgia", "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
 $font-mono: "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Consolas", "Courier New", monospace;
 $font-title-en: "Cormorant Garamond";
+$font-en: "Crimson Text";
 
 // font-size
 $fs-xs: 0.75rem;

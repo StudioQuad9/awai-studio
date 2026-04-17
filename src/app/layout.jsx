@@ -2,7 +2,7 @@
 
 import Header from '@/components/layout/Header';
 // import Footer from '@/components/layout/Footer';
-import { Noto_Sans_JP, Noto_Serif_JP, Cormorant_Garamond, Zen_Old_Mincho } from 'next/font/google';
+import { Noto_Sans_JP, Noto_Serif_JP, Cormorant_Garamond, Crimson_Text, Zen_Old_Mincho } from 'next/font/google';
 import "@/styles/shared/reset.css";
 import "./globals.scss";
 
@@ -31,6 +31,13 @@ const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-title-en",
 });
 
+const crimsonText = Crimson_Text({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-en",
+});
+
 const zenOldMincho = Zen_Old_Mincho({
   weight: ["400"],
   subsets: ["latin"],
@@ -57,6 +64,7 @@ export default function RootLayout({ children }) {
         ${notoSans.variable}
         ${notoSerif.variable}
         ${cormorantGaramond.variable}
+        ${crimsonText.variable}
         ${zenOldMincho.variable}
       `}
       suppressHydrationWarning

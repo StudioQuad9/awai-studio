@@ -7,7 +7,8 @@
   --ff-gothic: var(--font-gothic), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Hiragino Sans", sans-serif;
   --ff-mincho: var(--font-mincho), "Georgia", "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
   --ff-title-min: var(--font-tegomin), serif;
-  --ff-title-en: var(--font-title-en), sans-serif;
+  --ff-title-en: var(--font-title-en), serif;
+  --ff-en: var(--font-en), serif;
   --ff-mono: "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Consolas", "Courier New", monospace;
 }
 
@@ -29,20 +30,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  background-image: url('/images/hero-image-tea-room.jpg');
-  // background-image: url('/images/hero-image-heron01.jpg');
-  background-repeat: no-repeat;
-  // background-size: 350%;
-  // background-position: center 70%;
-  background-size: cover;
-  background-position: center;
-  @include mq(md) {
-    // background-image: url('/images/hero-image-whisks.jpg');
-    // background-image: url('/images/hero-image-tea-room.png');
+main > .container {
+  @include content-width;
+  margin-top: $navHeight;
+  padding: 1rem 0.5rem 2rem;
+  @include mq(lg) {
+    padding: 4rem 12rem;
+  }
+
+  &.container.top-page {
+    margin-top: unset;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('/images/hero-image-tea-room.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @include mq(md) {
+      background-image: url('/images/hero-image-tea-room.jpg');
+      background-size: cover;
+      background-position: center;
+    }
   }
 }
 
@@ -51,7 +60,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
   @include mq(md) {
     justify-content: center;
   }
@@ -238,6 +246,7 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
     padding: 1em 2em;
     font-size: 1.1rem;
     background-color: $color-gold-dark;
@@ -269,16 +278,6 @@ body {
     display: none;
   }
 }
-
-// // page.module.scssの詳細度を勝たせるための施作
-// // やりたいことはcontainerクラスの定義
-// :where(main) :where(.container) {
-//   @include content-width;
-//   padding: 3rem 2rem 4rem;
-//   @include mq(lg) {
-//     padding: 4rem 12rem;
-//   }
-// }
 
 // #top-panel {
 //   margin-top: 100vh;
@@ -415,12 +414,16 @@ body {
 //   text-align: justify;
 // }
 
-// p {
-//   text-align: justify;
-//   @include mq(md) {
-//     text-align: center;
-//   }
-// }
+p {
+  // text-align: justify;
+  font-family: var(--ff-en);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: $color-text;
+  @include mq(md) {
+    text-align: center;
+  }
+}
 
 li {
   list-style: none;

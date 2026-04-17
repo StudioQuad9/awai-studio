@@ -25,7 +25,7 @@ $breakpoints: (
 }
 
 @mixin content-width {
-  // width: 90%; // 本来はこれを設定なんだけど、今回は100％でやります。
+  width: 90%; // 本来はこれを設定なんだけど、今回は100％でやります。
   margin: 0 auto;
   max-width: $content-max-width;
 }
