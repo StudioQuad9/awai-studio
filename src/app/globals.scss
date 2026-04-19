@@ -48,9 +48,9 @@ main > .container {
     background-size: cover;
     background-position: center;
     @include mq(md) {
-      background-image: url('/images/hero-image-tea-room.jpg');
-      background-size: cover;
-      background-position: center;
+      max-width: unset;
+      height: 100vh;
+      padding-top: 4.5rem;
     }
   }
 }
