@@ -76,10 +76,7 @@ main > .container {
     font-family: var(--ff-title-en);
     color: rgba($color: $color-white, $alpha: .7);
     @include mq(lg) {
-      margin: 14rem 0 11rem;
-    }
-    @include mq(xl) {
-      margin: 20rem 0 15rem;
+      margin: 14rem 0 12rem;
     }
     &::after {
       position: absolute;
