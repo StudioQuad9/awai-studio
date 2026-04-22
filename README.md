@@ -153,6 +153,7 @@ mail: info@awai-studio.jp
 ```
 └── src/
     ├── app/
+    │   ├── favicon.ico
     │   ├── globals.scss
     │   ├── layout.jsx
     │   ├── page.js
@@ -175,8 +176,8 @@ mail: info@awai-studio.jp
     │   ├── useParallaxGaps.js
     │   └── useScrollAnimation.js
     ├── lib/
-    │   ├── config
-    │   │   └── site.js
+    │   └── config
+    │       └── site.js
     └── styles/
         └── shared
             ├── _daypicker.scss

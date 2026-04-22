@@ -1,7 +1,7 @@
 // @/app/layout.jsx
 
 import Header from '@/components/layout/Header';
-// import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/Footer';
 import { Noto_Sans_JP, Noto_Serif_JP, Cormorant_Garamond, Crimson_Text, Zen_Old_Mincho } from 'next/font/google';
 import "@/styles/shared/reset.css";
 import "./globals.scss";
@@ -59,7 +59,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="ja"
+      lang="en"
       className={`
         ${notoSans.variable}
         ${notoSerif.variable}
@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

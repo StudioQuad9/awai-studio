@@ -5,12 +5,12 @@
 .footer {
   width: 100%;
   margin-top: auto;
-  padding: 2rem 0;
-  color: $color-white;
-  background-color: $color-black;
+  padding: 1.5rem 0;
+  background-color: rgba($color:  $color-primary, $alpha: .8);  
 }
 
 .copyright {
+  color: $color-white;
   text-align: center;
   margin: 0;
 }

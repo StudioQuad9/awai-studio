@@ -44,16 +44,12 @@ main > .container {
   margin-top: unset;
   width: 100%;
   height: 100%;
-  // max-width: 100vw;
-  // max-height: 100vh;
   padding: 0;
   background-image: url('/images/hero-image-tea-room.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   @include mq(md) {
-    // max-width: unset;
-    // height: 100vh;
     padding-top: 4.5rem;
   }
 }
@@ -281,6 +277,62 @@ main > .container {
   }
 }
 
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  font-family: var(--ff-title-en);
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h2, h3 {
+  margin: .5em 0 .25em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+
+p {
+  // text-align: justify;
+  font-family: var(--ff-en);
+  font-size: 1.4rem; // 15px × 1.4 ＝ 21px
+  line-height: 1.3;
+  color: $color-text;
+  @include mq(md) {
+    // text-align: center;
+  }
+}
+
+li {
+  list-style: none;
+  &:not(:first-of-type) {
+    // margin-top: 3rem;
+  }
+}
+
+button,
+input,
+select,
+textarea,
+nav {
+  font-family: var(--ff-gothic);
+}
+
+a {
+  font-size: 0.9rem;
+  font-feature-settings: "palt" 1;
+  color: $color-black;
+  text-decoration: none;
+  // pointer-events: auto;
+}
+
+
 // #top-panel {
 //   margin-top: 100vh;
 // }
@@ -388,25 +440,7 @@ main > .container {
 //   }
 // }
 
-h1, h2, h3 {
-  margin-bottom: 1rem;
-  font-family: var(--ff-title-en);
-  font-size: 3rem;
-  line-height: 1;
-}
 
-h2, h3 {
-  margin: .5em 0 .25em;
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
 
 // h2 {
 //   margin-bottom: .5rem;
@@ -430,40 +464,6 @@ h3 {
 //   line-height: 1.7;
 //   text-align: justify;
 // }
-
-p {
-  // text-align: justify;
-  font-family: var(--ff-en);
-  font-size: 1.4rem; // 15px × 1.4 ＝ 21px
-  line-height: 1.3;
-  color: $color-text;
-  @include mq(md) {
-    // text-align: center;
-  }
-}
-
-li {
-  list-style: none;
-  &:not(:first-of-type) {
-    // margin-top: 3rem;
-  }
-}
-
-button,
-input,
-select,
-textarea,
-nav {
-  font-family: var(--ff-gothic);
-}
-
-a {
-  font-size: 0.9rem;
-  font-feature-settings: "palt" 1;
-  color: $color-black;
-  text-decoration: none;
-  // pointer-events: auto;
-}
 
 // .btn {
 //   display: inline-flex;
