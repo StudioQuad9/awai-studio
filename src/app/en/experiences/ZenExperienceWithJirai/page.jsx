@@ -112,7 +112,7 @@ export default function TeaExperienceWithSoKo() {
       <h2>Practical Information</h2>
 
       <ul>
-        <li>Duration: approximately 90 minutes</li>
+        <li>Duration: approximately 120 minutes</li>
         <li>Group size: up to 6 guests</li>
         <li>Language: English</li>
         <li>Dress code: none (seiza is traditional, but not required)</li>

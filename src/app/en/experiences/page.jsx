@@ -18,12 +18,12 @@ export default function Experiences() {
       <section className="experiences-list">
         {/* Tea Experience */}
         <Link href="/en/experiences/TeaExperienceWithSoKo">
-          <h2>Tea Experience with SoKo</h2>
+          <h2>Beyond Performance — A Private Tea Gathering with a Kyoto Practitioner</h2>
           <p>
-            A participatory tea experience in Kyoto, guided by tea master SoKo
-            through dialogue, practice, and reflection.
+            A quiet, small-group experience with a Kyoto practitioner, centered on
+            making tea, real charcoal, and thoughtful conversation.
           </p>
-          <p>90 minutes / up to 6 guests</p>
+          <p>120 minutes / up to 5 guests</p>
         </Link>
 
         <Link href="/en/experiences/ZenExperienceWithJirai">
