@@ -47,8 +47,8 @@ const zenOldMincho = Zen_Old_Mincho({
 
 // meta要素の設定
 export const metadata = {
-  title: "This project concept here | RETREAT K",
-  description: "This project description here",
+  title: "Private Cultural Experiences in Kyoto | Awai Studio",
+  description: "Awai Studio offers private cultural experiences in Kyoto for travelers seeking quiet, depth, and a more thoughtful encounter with Japanese culture.",
 };
 
 // 開発中だとコンソールでエラーが発生する。
